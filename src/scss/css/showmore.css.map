@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "CAIA,AAAA,AAEE,oBAFD,AAAA,EACA,IAAI,AACF,WAAW,CAAC;EACZ,OAAO,EAAE,IAAI;CACb;;AACD,AAAA,iBAAiB,EALnB,AAAA,oBAAC,AAAA,EACA,IAAI,CAIiB;EACnB,OAAO,EAAE,IAAI;CAIb;;AALD,AAEC,iBAFgB,EALnB,AAAA,oBAAC,AAAA,EACA,IAAI,AAMD,WAAW,CAAC;EACZ,OAAO,EAAE,KAAK;CACd",
+    "sources": [
+        "../base/showmore.scss"
+    ],
+    "names": [],
+    "file": "showmore.css"
+}

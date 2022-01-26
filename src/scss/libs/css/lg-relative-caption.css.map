@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEQ,oBAFY,CAChB,SAAS,CACL,YAAY,CAAC;EACT,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,CAAC;EACV,gBAAgB,EAAE,IAAI;CACzB;;AAPT,AAQQ,oBARY,CAChB,SAAS,CAOL,yBAAyB,CAAC;EACtB,OAAO,EAAE,CAAC;EACV,OAAO,EAAE,MAAM;EACf,UAAU,EAAE,iBAAiB;CAChC;;AAZT,AAeY,oBAfQ,CAChB,SAAS,CAaL,gBAAgB,CACZ,yBAAyB,CAAC;EACtB,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "../gallery/lg-relative-caption.scss"
+    ],
+    "names": [],
+    "file": "lg-relative-caption.css"
+}

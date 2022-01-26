@@ -1,0 +1,208 @@
+//====================================================================================================
+
+.header {
+	// .top-header
+	background-color: $mainDarkColor;
+}
+
+.top-header {
+	padding: rem(10) 0;
+	color: #fff;
+	// .top-header__container
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		min-height: rem(50);
+	}
+	// .top-header__menu
+	&__menu {
+		flex: 1 1 auto;
+	}
+	// .top-header__user
+	&__user {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 600;
+		line-height: math.div(22, 18);
+		&::before {
+			font-size: rem(28);
+			margin-right: em(15, 28);
+		}
+	}
+}
+//====================================================================================================
+
+.menu {
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 5px;
+		@include adaptiveValue("column-gap", 60, 20);
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+	}
+}
+//====================================================================================================
+.body-header {
+	padding: rem(10);
+	background: #ecf1f2;
+
+	// .body-header__container
+	&__container {
+		display: flex;
+		min-height: rem(70);
+		align-items: center;
+	}
+	//. body-header__logo
+	&__logo {
+		@extend %ic;
+		@extend ._icon-logo;
+		font-size: rem(42);
+		color: $mainDarkColor;
+	}
+	// .body-header__search
+	&__search {
+		flex: 1 1 auto;
+		padding-right: rem(20);
+		@include adaptiveValue("padding-left", 158, 20);
+	}
+}
+//====================================================================================================
+.search-header {
+	max-width: rem(377);
+	background: rgba(7, 7, 7, 0.03);
+	border-radius: rem(3);
+	position: relative;
+	border: 1px solid rgba(4, 4, 4, 0.5);
+	// .search-header__button
+	&__button {
+		position: absolute;
+		top: 0;
+		left: rem(8);
+		color: rgba(0, 0, 0, 0.5);
+		background: transparent;
+		height: rem(41);
+		width: rem(41);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(14);
+	}
+	// .search-header__input
+	&__input {
+		width: 100%;
+		background: transparent;
+		height: rem(41);
+		color: $mainColor;
+		padding: 0 rem(20) 0 rem(50);
+	}
+}
+//====================================================================================================
+.actions-header {
+	display: flex;
+	align-items: center;
+	column-gap: rem(30);
+
+	// .actions-header__location
+	&__location {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 600;
+		margin: 0 rem(25) 0 0;
+		&::before {
+			font-size: rem(24);
+			margin: 0 em(10, 24) 0 0;
+		}
+	}
+}
+//====================================================================================================
+.phones-header {
+	// .phone-header__items
+	&__items {
+		//123
+	}
+	// ..phone-header__item
+	&__item {
+		// .phone-header__item
+		position: relative;
+	}
+	// .phone-header__phone
+	&__phone {
+		font-weight: 600;
+		line-height: math.div(22, 18);
+	}
+	// .phone-header__arrow
+	&__arrow {
+		color: #e8aa31;
+		font-size: rem(10);
+		margin: 0px 0px 0px em(17, 16);
+	}
+	// ..phone-header__list
+	&__list {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		left: 0;
+		border-radius: rem(10);
+		background: #fff;
+		padding: rem(15);
+	}
+}
+//====================================================================================================
+//====================================================================================================
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		flex: 0 0 30px;
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

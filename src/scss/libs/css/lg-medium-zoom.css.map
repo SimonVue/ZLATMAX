@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACjB,MAAM,EAAE,OAAO;CAClB;;AACD,AACI,eADW,CACX,SAAS,CAAC;EACN,MAAM,EAAE,QAAQ;CAanB;;AAfL,AAKY,eALG,CACX,SAAS,AAGJ,QAAQ,CACL,GAAG,AAAA,UAAU,CAAC;EACV,MAAM,EAAE,QAAQ;CACnB;;AAPb,AAWY,eAXG,CACX,SAAS,AASJ,YAAY,CACT,GAAG,AAAA,UAAU,CAAC;EACV,MAAM,EAAE,QAAQ;CACnB",
+    "sources": [
+        "../gallery/lg-medium-zoom.scss"
+    ],
+    "names": [],
+    "file": "lg-medium-zoom.css"
+}
