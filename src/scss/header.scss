@@ -135,28 +135,47 @@
 	// ..phone-header__item
 	&__item {
 		// .phone-header__item
+		display: flex;
 		position: relative;
 	}
 	// .phone-header__phone
 	&__phone {
 		font-weight: 600;
+		white-space: nowrap;
 		line-height: math.div(22, 18);
 	}
 	// .phone-header__arrow
 	&__arrow {
 		color: #e8aa31;
 		font-size: rem(10);
+		transition: transform 0.3s ease 0s;
 		margin: 0px 0px 0px em(17, 16);
+		&._spoller-active {
+			transform: rotate(-180deg);
+		}
 	}
-	// ..phone-header__list
+	// .phone-header__list
 	&__list {
 		position: absolute;
 		top: 100%;
 		width: 100%;
 		left: 0;
+		margin: rem(5) 0px 0px 0px;
 		border-radius: rem(10);
 		background: #fff;
 		padding: rem(15);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		li {
+			&:not(:last-child) {
+				margin-bottom: em(8, 18);
+			}
+		}
+	}
+	// .phone-header__callback
+	&__callback {
+		font-weight: 700;
+		line-height: math.div(22, 18);
+		color: #e8aa31;
 	}
 }
 //====================================================================================================
