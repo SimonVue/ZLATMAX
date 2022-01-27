@@ -2,12 +2,13 @@
 
 .header {
 	// .top-header
+	color: #fff;
 	background-color: $mainDarkColor;
 }
 
 .top-header {
 	padding: rem(10) 0;
-	color: #fff;
+
 	// .top-header__container
 	&__container {
 		display: flex;
@@ -28,6 +29,13 @@
 		&::before {
 			font-size: rem(28);
 			margin-right: em(15, 28);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
@@ -51,10 +59,16 @@
 	&__link {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 //====================================================================================================
 .body-header {
+	color: $mainColor;
 	padding: rem(10);
 	background: #ecf1f2;
 
@@ -124,6 +138,13 @@
 			font-size: rem(24);
 			margin: 0 em(10, 24) 0 0;
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 	// .actions-header__phones
 	&__phones {
@@ -188,6 +209,11 @@
 		font-weight: 700;
 		line-height: math.div(22, 18);
 		color: $mainOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 //====================================================================================================
@@ -231,8 +257,145 @@
 	// .cart-header__link
 	&__link {
 		color: $mainOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
+//====================================================================================================
+.header {
+	&__catalog {
+	}
+}
+.catalog-header {
+	position: relative;
+	background: $mainDarkColor;
+	padding: rem(10) 0;
+	&__container {
+	}
+
+	&__menu {
+	}
+}
+.menu-catalog {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		padding: 0 rem(10);
+		min-height: rem(70);
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		transition: color 0.3s ease 0s;
+		&::after {
+			content: "";
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			bottom: 0;
+			left: rem(10);
+			height: 2px;
+			width: calc(100% - rem(20));
+			background: $mainOrange;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainOrange;
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	&__sub-menu {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 100%;
+		background: $mainDarkColor;
+	}
+}
+.sub-menu-catalog {
+	padding-bottom: rem(30);
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__category {
+		align-self: start;
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		font-weight: 700;
+		padding: rem(30) rem(10);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__list {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: rem(30) rem(10);
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__all {
+		align-self: flex-start;
+		padding-top: rem(30);
+		padding-left: rem(10);
+		padding-right: rem(10);
+		font-size: rem(16);
+		color: $mainOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
 //====================================================================================================
 //Burger
 .icon-menu {
