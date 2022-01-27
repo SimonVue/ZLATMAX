@@ -125,6 +125,17 @@
 			margin: 0 em(10, 24) 0 0;
 		}
 	}
+	// .actions-header__phones
+	&__phones {
+		// 123
+	}
+	// .actions-header__favorites
+	&__favorite {
+		font-size: rem(27);
+	}
+	// actions-header__cart
+	&__cart {
+	}
 }
 //====================================================================================================
 .phones-header {
@@ -146,7 +157,7 @@
 	}
 	// .phone-header__arrow
 	&__arrow {
-		color: #e8aa31;
+		color: $mainOrange;
 		font-size: rem(10);
 		transition: transform 0.3s ease 0s;
 		margin: 0px 0px 0px em(17, 16);
@@ -173,12 +184,55 @@
 	}
 	// .phone-header__callback
 	&__callback {
+		margin: rem(3) 0px 0px px;
 		font-weight: 700;
 		line-height: math.div(22, 18);
-		color: #e8aa31;
+		color: $mainOrange;
 	}
 }
 //====================================================================================================
+.cart-header {
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	// .cart-header__icon
+	&__icon {
+		flex: 0 0 37px;
+		font-size: rem(35);
+		position: relative;
+		span {
+			position: absolute;
+			width: rem(14);
+			height: rem(14);
+			font-size: rem(8);
+			background: $mainOrange;
+			border-radius: 50%;
+			color: #fff;
+			display: flex;
+			top: 0;
+			right: 0;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	// .cart-header__body
+	&__body {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		flex: 0 0 auto;
+		&:not(:last-child) {
+			margin-bottom: em(5, 16);
+		}
+	}
+	// .cart-header__summ
+	&__summ {
+		font-weight: 500;
+	}
+	// .cart-header__link
+	&__link {
+		color: $mainOrange;
+	}
+}
 //====================================================================================================
 //Burger
 .icon-menu {
