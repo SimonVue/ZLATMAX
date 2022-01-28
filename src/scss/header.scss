@@ -272,7 +272,6 @@
 .catalog-header {
 	position: relative;
 	background: $mainDarkColor;
-	padding: rem(10) 0;
 	&__container {
 	}
 
@@ -337,29 +336,24 @@
 .sub-menu-catalog {
 	&__block {
 		display: none;
-		padding-bottom: rem(30);
-
-		&__container {
-			padding: 0;
+		@for $var from 1 to 6 {
+			&_#{$var} {
+				grid-template-columns: repeat($var, minmax(auto, rem(320)));
+			}
 		}
-
 		&._sub-menu-open {
-			display: flex;
+			display: grid;
 		}
 	}
-
-	&__column {
-		flex: 0 0 auto;
-		display: flex;
-		flex-direction: column;
+	&__container {
+		padding: 0 rem(10);
 	}
 
 	&__category {
-		align-self: start;
 		font-size: rem(16);
 		line-height: math.div(20, 16);
 		font-weight: 700;
-		padding: rem(30) rem(15);
+		padding: rem(30) rem(15) rem(30) 0;
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
@@ -368,11 +362,10 @@
 	}
 
 	&__list {
-		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		padding: rem(30) rem(15);
+		padding: rem(30) rem(15) rem(30) 0;
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	}
@@ -389,12 +382,12 @@
 			}
 		}
 	}
+	//.sub-menu-catalog
+	&__footer {
+		padding: rem(30) rem(15) rem(30) 0;
+	}
 
 	&__all {
-		align-self: flex-start;
-		padding-top: rem(30);
-		padding-left: rem(15);
-		padding-right: rem(15);
 		font-size: rem(16);
 		color: $mainOrange;
 		@media (any-hover: hover) {

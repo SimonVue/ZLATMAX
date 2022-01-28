@@ -5,6 +5,16 @@ import { flsModules } from "./modules.js";
 
 document.addEventListener("click", documentActions);
 
+
+/* ============== автодобавление колонок в подменю =================== */
+const menuBlocks = document.querySelectorAll('.sub-menu-catalog__block');
+if (menuBlocks.length) {
+  menuBlocks.forEach(menuBlock => {
+    const menuBlockItems = menuBlock.querySelectorAll('.sub-menu-catalog__category').length;
+    menuBlock.classList.add(`sub-menu-catalog__block_${menuBlockItems}`);
+  });
+}
+/* ============== раскрываем каталог =================== */
 function documentActions(e) {
   const targetElement = e.target;
   if (targetElement.closest('[data-parent]')) {
