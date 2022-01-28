@@ -2,12 +2,13 @@
 
 .header {
 	// .top-header
+	color: #fff;
 	background-color: $mainDarkColor;
 }
 
 .top-header {
 	padding: rem(10) 0;
-	color: #fff;
+
 	// .top-header__container
 	&__container {
 		display: flex;
@@ -28,6 +29,13 @@
 		&::before {
 			font-size: rem(28);
 			margin-right: em(15, 28);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
@@ -51,10 +59,16 @@
 	&__link {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 //====================================================================================================
 .body-header {
+	color: $mainColor;
 	padding: rem(10);
 	background: #ecf1f2;
 
@@ -124,6 +138,24 @@
 			font-size: rem(24);
 			margin: 0 em(10, 24) 0 0;
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .actions-header__phones
+	&__phones {
+		// 123
+	}
+	// .actions-header__favorites
+	&__favorite {
+		font-size: rem(27);
+	}
+	// actions-header__cart
+	&__cart {
 	}
 }
 //====================================================================================================
@@ -146,7 +178,7 @@
 	}
 	// .phone-header__arrow
 	&__arrow {
-		color: #e8aa31;
+		color: $mainOrange;
 		font-size: rem(10);
 		transition: transform 0.3s ease 0s;
 		margin: 0px 0px 0px em(17, 16);
@@ -173,11 +205,202 @@
 	}
 	// .phone-header__callback
 	&__callback {
+		margin: rem(3) 0px 0px px;
 		font-weight: 700;
 		line-height: math.div(22, 18);
-		color: #e8aa31;
+		color: $mainOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
+//====================================================================================================
+.cart-header {
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	// .cart-header__icon
+	&__icon {
+		flex: 0 0 37px;
+		font-size: rem(35);
+		position: relative;
+		span {
+			position: absolute;
+			width: rem(14);
+			height: rem(14);
+			font-size: rem(8);
+			background: $mainOrange;
+			border-radius: 50%;
+			color: #fff;
+			display: flex;
+			top: 0;
+			right: 0;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	// .cart-header__body
+	&__body {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		flex: 0 0 auto;
+		&:not(:last-child) {
+			margin-bottom: em(5, 16);
+		}
+	}
+	// .cart-header__summ
+	&__summ {
+		font-weight: 500;
+	}
+	// .cart-header__link
+	&__link {
+		color: $mainOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+//====================================================================================================
+.header {
+	&__catalog {
+	}
+}
+.catalog-header {
+	position: relative;
+	background: $mainDarkColor;
+	&__container {
+	}
+
+	&__menu {
+	}
+}
+.menu-catalog {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		padding: 0 rem(10);
+		min-height: rem(70);
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		transition: color 0.3s ease 0s;
+		&::after {
+			content: "";
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			bottom: 0;
+			left: rem(10);
+			height: 2px;
+			width: calc(100% - rem(20));
+			background: $mainOrange;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainOrange;
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		&._sub-menu-active {
+			color: $mainOrange;
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__sub-menu {
+		width: 100%;
+		left: 0;
+		top: 100%;
+		background: $mainDarkColor;
+	}
+}
+.sub-menu-catalog {
+	&__block {
+		display: none;
+		@for $var from 1 to 6 {
+			&_#{$var} {
+				grid-template-columns: repeat($var, minmax(auto, rem(320)));
+			}
+		}
+		&._sub-menu-open {
+			display: grid;
+		}
+	}
+	&__container {
+		padding: 0 rem(10);
+	}
+
+	&__category {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		font-weight: 700;
+		padding: rem(30) rem(15) rem(30) 0;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: rem(30) rem(15) rem(30) 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	//.sub-menu-catalog
+	&__footer {
+		padding: rem(30) rem(15) rem(30) 0;
+	}
+
+	&__all {
+		font-size: rem(16);
+		color: $mainOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
 //====================================================================================================
 //====================================================================================================
 //Burger
