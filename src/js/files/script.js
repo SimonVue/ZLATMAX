@@ -14,7 +14,7 @@ if (menuBlocks.length) {
     menuBlock.classList.add(`sub-menu-catalog__block_${menuBlockItems}`);
   });
 }
-/* ============== раскрываем каталог =================== */
+/* ============== раскрываем каталог по клику =================== */
 function documentActions(e) {
   const targetElement = e.target;
   if (targetElement.closest('[data-parent]')) {
