@@ -1,18 +1,24 @@
 <header class="header">
 	<div class="header__top top-header">
 		<div class="top-header__container">
-			<div class="top-header__menu menu">
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Оплата и доставка</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Новости</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-			<a href="" class="top-header__user _icon-user"><span>Личный кабинет</span></a>
-			<button type="button" class="icon-menu"><span></span></button>
+			<nav class="top-header__menu menu-top-header">
+				<ul data-da=".menu__body,991.98" class="menu-top-header__list">
+					<li class="menu-top-header__item menu-top-header__item_catalog"><a href=""
+							class="menu-top-header__link menu-top-header__link_catalog _icon-arrow-bottom">Каталог
+							товаров</a></li>
+					<li class="menu-top-header__item"><a href="" class="menu-top-header__link">О нас</a></li>
+					<li class="menu-top-header__item"><a href="" class="menu-top-header__link">Оплата и доставка</a></li>
+					<li class="menu-top-header__item"><a href="" class="menu-top-header__link">Новости</a></li>
+					<li class="menu-top-header__item"><a href="" class="menu-top-header__link">Контакты</a></li>
+				</ul>
+			</nav>
+			<a href="" data-da=".top-header__container,991.98,0" class="top-header__user _icon-user"><span>Личный
+					кабинет</span></a>
+			<nav hidden class="menu">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<div class="menu__body">
+				</div>
+			</nav>
 		</div>
 	</div>
 	<div class="header__body body-header">
@@ -27,7 +33,7 @@
 			</div>
 			<div class="body-header__actions actions-header">
 				<a href="" class="actions-header__location _icon-location"><span>Москва</span></a>
-				<div class="actions-header__phones phones-header">
+				<div data-da=".top-header__container,991.98,first" class="actions-header__phones phones-header">
 					<div data-spollers class="phones-header__items">
 						<div class="phones-header__item">
 							<a href="tel:88007774967" class="phones-header__phone">8-800-777-49-67</a>
@@ -41,14 +47,14 @@
 					</div>
 					<button type="button" data-popup="#callback" class="phones-header__callback">Заказать звонок</button>
 				</div>
-				<a href="" class="actions-header__favorite _icon-favorite"></a>
-				<div href="" class="actions-header__cart cart-header">
+				<a href="" data-da=".top-header__container,991.98,1" class="actions-header__favorite _icon-favorite"></a>
+				<a href="" data-da=".top-header__container,991.98,2" class="actions-header__cart cart-header">
 					<div class="cart-header__icon _icon-cart"><span>0</span></div>
 					<div class="cart-header__body">
 						<div class="cart-header__summ">0 р.</div>
-						<a href="" class="cart-header__link">Оформить заказ</a>
+						<div class="cart-header__link">Оформить заказ</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -56,13 +62,17 @@
 		<div class="catalog-header__container">
 			<nav class="catalog-header__menu menu-catalog">
 				<ul class="menu-catalog__list">
-					<li class="menu-catalog__item"><button data-parent="1" class="menu-catalog__link">Каталог ножей</button></li>
+					<li class="menu-catalog__item"><button data-parent="1" class="menu-catalog__link">Каталог ножей</button>
+					</li>
 					<li class="menu-catalog__item"><button data-parent="2" class="menu-catalog__link">Клинковое оружие</button>
 					</li>
-					<li class="menu-catalog__item"><button data-parent="3" class="menu-catalog__link">Сувенирные изделия</button>
+					<li class="menu-catalog__item"><button data-parent="3" class="menu-catalog__link">Сувенирные
+							изделия</button>
 					</li>
-					<li class="menu-catalog__item"><button data-parent="4" class="menu-catalog__link">Фонари ARMYTEK</button></li>
-					<li class="menu-catalog__item"><button data-parent="5" class="menu-catalog__link">Сопуствующие товары</button>
+					<li class="menu-catalog__item"><button data-parent="4" class="menu-catalog__link">Фонари ARMYTEK</button>
+					</li>
+					<li class="menu-catalog__item"><button data-parent="5" class="menu-catalog__link">Сопуствующие
+							товары</button>
 					</li>
 				</ul>
 				<div class="menu-catalog__sub-menu sub-menu-catalog">
@@ -168,6 +178,9 @@
 							<div class="sub-menu-catalog__category">
 								<a href="" class="sub-menu-catalog__link-category">Производство ножей</a>
 							</div>
+							<div class="sub-menu-catalog__category">
+								<a href="" class="sub-menu-catalog__link-category">Заточка и полировка ножей</a>
+							</div>
 							<ul class="sub-menu-catalog__list">
 								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Разделочные ножи</a></li>
 								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Туристические ножи</a>
@@ -198,6 +211,16 @@
 								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Оружейная компания</a>
 								</li>
 							</ul>
+							<ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Паста ГОИ</a></li>
+								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Алмазная паста</a>
+								</li>
+								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Бруски и камни для
+										заточки</a>
+								</li>
+								<li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Заточные системы</a></li>
+							</ul>
+							<div class="sub-menu-catalog__footer"><a href="" class="sub-menu-catalog__all">Смотреть все</a></div>
 							<div class="sub-menu-catalog__footer"><a href="" class="sub-menu-catalog__all">Смотреть все</a></div>
 							<div class="sub-menu-catalog__footer"><a href="" class="sub-menu-catalog__all">Смотреть все</a></div>
 						</div>
